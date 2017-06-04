@@ -1,0 +1,953 @@
+{% extends 'base.html.twig' %}
+
+{% if logged is defined == false %}
+    {% set logged = app.session.get('logged') %}
+{% endif %}
+
+{% block header %}
+
+    {% set vars = {'logged': logged} %}
+    {% include 'secondary_templates/header.html.twig' with vars %}
+    
+{% endblock %}
+
+{% block body %}
+
+    <div class="background-image-responsive" style="background-image:url({{ asset('img/background-image-publicacion.jpg') }})">
+        <div class="streak streak-lg streak-photo more-height  overlay"></div>
+    </div>
+    
+    <!-- Main Container -->
+    <div id="container_publicacion" class="container pb-3">
+       
+        <section>
+           
+            <div class="row">
+
+                <!-- First Column -->
+                <div class="col-lg-12">
+                   
+                   
+                    <!-- Main Info -->
+                    <div class="jumbotron margin">
+                        
+                            <h2 id="titulo_publicacion">{{ isInsert is defined ? "Titulo" : publicacion.titulo }}</h2>
+                            <h1 class="pt-1 pb-1"><strong id="precio_publicacion">{{ isInsert is defined ? "Precio" : "#{publicacion.precio} €" }}</strong></h1>
+                        
+                        <!-- Social shares -->
+                        <div class="social-counters ">
+                            
+                            {%if isInsert is defined or isUpdate is defined %}
+                                <button id="save-button" type="button" class="btn btn-primary">
+                                    {% if isInsert is defined %}
+                                        Insertar
+                                        <i class="fa fa-plus right"></i>
+                                    {% else %}
+                                    
+                                        Actualizar
+                                        <i class="fa fa-check right"></i>
+                                    
+                                    {% endif %}
+                                </button>
+                                <button id="on-update-data-publicacion" type="button" class="btn btn-primary" data-toggle="modal">
+                                    <span>Editar Campos</span>
+                                    <i class="fa fa-pencil"></i>
+                                </button>
+                                
+                                {% if isUpdate is defined %}
+                                
+                                <button id="eliminar_publicacion" type="button" class="btn btn-warning">
+                                        Eliminar Publicacion
+                                        <i class="fa fa-trash right"></i>
+                                </button>
+                                
+                                {% endif%}
+                            {% else %}
+                            
+                                <a href="{{ path('profile_user', {'user': publicacion.usuario.id}) }}">
+                                    <button id="ver_perfil" type="button" class="btn btn-primary">
+                                        Ver perfil
+                                        <i class="fa fa-eye right"></i>
+                                    </button>
+                                </a>
+                                
+                                {% if isCompleto is defined %}
+                                
+                                    <button type="button" class="btn btn-warning">
+                                        Completo
+                                        <i class="fa fa-times right"></i>
+                                    </button>
+                                {% else %}
+                                    <button id="gestionar_reserva" type="button" class="btn {{ hasReserva is defined and hasReserva >  0 ? 'btn-warning' : 'btn-primary' }}">
+                                         {% if hasReserva is defined and hasReserva > 0 %}
+                                            Cancelar Reserva  
+                                            <i class="fa fa-trash right"></i>
+                                         {% else %}
+                                             Reservar
+                                             <i class="material-icons right md-18">room_service</i>
+                                         {% endif %}
+                                    </button>
+                                    
+                                {% endif %} 
+                                
+                            {% endif %}
+                        </div>
+                        <!-- /.Social shares -->
+
+                    </div>
+                    <!-- /.Main Info -->
+                    
+                    <!-- Section: Features -->
+                    <section class="section feature-box pt-1">
+
+                        <!-- Section heading -->
+                        <h1 class="section-heading">Datos de la publicación</h1>
+
+                        <!-- Section sescription -->
+                        <p id="descripcion_publicacion" class="section-description lead">
+                           
+                            {{publicacion.descripcion}}
+                        </p>
+
+                        <!-- First row -->
+                        <div class="row">
+                            
+                            {% if isInsert is defined or isUpdate is defined %}
+                                
+                                <label for="file-input-publicacion" class="full">
+                                    {% if publicacion.foto is empty %}
+                            
+                                        <a alt="Cambiar imagen">
+                                            <div id="foto_publicacion" class="col-md-12 center-on-small-only background-image-responsive image-publicacion" 
+                                             style="background-image:url({{asset("uploads/Publicacion/publicacion-image-default.jpg")}})"></div>
+                                        </a>
+                                             
+                                    {% else %}
+                                        
+                                        <a alt="Cambiar imagen">
+                                            
+                                            <div id="foto_publicacion" class="col-md-12 center-on-small-only background-image-responsive image-publicacion" 
+                                                style="background-image:url({{asset("uploads/Publicacion/#{publicacion.foto}")}})"></div>
+                                        </a>
+                                    {% endif %}
+                                    
+                                </label>
+                                    
+                                <input id="file-input-publicacion" type="file" style="display:none" accept="image/*"/>
+                                
+                            {% else %}
+                            
+                                {% if publicacion.foto is empty %}
+                            
+                                    <div id="foto_publicacion" class="col-md-12 center-on-small-only background-image-responsive image-publicacion" 
+                                         style="background-image:url({{asset("uploads/Publicacion/publicacion-image-default.jpg")}})"></div>
+                                         
+                                {% else %}
+                                
+                                    <div id="foto_publicacion" class="col-md-12 center-on-small-only background-image-responsive image-publicacion" 
+                                        style="background-image:url({{asset("uploads/Publicacion/#{publicacion.foto}")}})"></div>
+                                {% endif %}
+                                
+                            {% endif %}
+                        </div>
+                        
+                        <div class="row features-small mt-15">
+                            
+                            <div class="col-md-6 col-sm-12">
+                                
+                                <!-- First row -->
+                                <div class="row">
+                                    <div class="col-2">
+                                        <i class="fa fa-users primary-color-text"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <h4 class="feature-title">Número Gourmets</h4>
+                                        <p id="numero_gourmets_publicacion" class="grey-text">
+                                            {{publicacion.plazasTotales}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /.First row -->
+
+                                <div style="height:40px"></div>
+
+
+                                <!-- Third row -->
+                                <div class="row">
+                                    <div class="col-2">
+                                        <i class="fa fa-clock-o primary-color-text"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <h4 class="feature-title">Hora Inicio</h4>
+                                        <p id="horaInicio_publicacion" class="grey-text">
+                                           {{publicacion.horaInicio | date("H:i")}}
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div style="height:40px"></div>
+
+                                <!-- Second row -->
+                                <div class="row">
+                                    <div class="col-2">
+                                        <i class="fa fa-calendar primary-color-text"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <h4 class="feature-title">Fecha</h4>
+                                        <p id="fecha_publicacion" class="grey-text">
+                                            {{publicacion.fecha | date("d-m-Y")}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /.Second row -->
+
+                                
+                            </div>
+                            
+                            <div class="col-md-6 col-sm-12">
+                                <!-- Second row -->
+                                <div class="row">
+                                    <div class="col-2">
+                                        <i class="fa fa-home primary-color-text"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <h4 class="feature-title">Domicilio</h4>
+                                        <p id="domicilio_publicacion" class="grey-text">
+                                            
+                                            {% if publicacion.domicilio is null == false %}
+                                                {{publicacion.domicilio.direccion}}
+                                            {% else %}
+                                                Ningun domicilio seleccionado
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /.Second row -->
+
+                                <div style="height:40px"></div>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        <i class="fa fa-clock-o primary-color-text"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <h4 class="feature-title">Hora Fin</h4>
+                                        <p id="horaFin_publicacion" class="grey-text">
+                                           {{publicacion.horaFin | date("H:i")}}
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                
+                            
+                                <div style="height:40px"></div>
+                                
+                                <div class="row">
+                                    
+                                    <div class="col-2">
+                                        <i class="fa fa-cutlery primary-color-text"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <h4 class="feature-title">Platos</h4>
+                                        <div id="platos_publicacion">
+                                            {% set platos = publicacion.platos is null ? [] : publicacion.platos %}
+                                            
+                                            {% for plato in platos %}
+                                            
+                                                <div class="chip">{{plato}}</div>
+                                                
+                                            {% endfor %}
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Third row -->
+                                
+                            </div>
+                            
+                            
+                        </div>
+                        
+
+                    </section>
+                    <!-- /.Section: Features -->
+                    
+                
+                    
+                </div>
+                <!-- /.First Column -->
+                
+            </div>
+            
+        </section>
+        
+    </div>
+    <!-- /.Main Container -->
+
+    <!-- Actualizado correctamente -->
+    <div class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-success" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead">Completado</p>
+    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+    
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fa fa-check fa-4x mb-1 animated rotateIn"></i>
+                        <p id="success-text">
+                            Publicacion actualizada correctamente
+                        </p>
+                    </div>
+                </div>
+    
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <a type="button" class="btn btn-outline-secondary-modal waves-effect" data-dismiss="modal">Ok</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+
+    <!-- Fallos -->
+    <div class="modal fade" id="centralModalDanger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-danger" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead">Error</p>
+    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+    
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fa fa-close fa-4x mb-1 animated rotateIn"></i>
+                        <p id="error-text">Ha ocurrido un error durante la actualización de la publicación</p>
+                    </div>
+                </div>
+    
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <a type="button" class="btn btn-outline-secondary-modal waves-effect" data-dismiss="modal">Cencelar</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Central Modal Medium Danger-->
+
+    <div class="modal fade" id="centralModalWarning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-warning" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead">Cuidado!</p>
+    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+    
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fa fa-trash fa-4x mb-1 animated rotateIn"></i>
+                        <p>{{ isUpdate is defined ? "¿Está seguro de eliminar su publicación?" : "¿Está seguro de eliminar su reserva?" }}</p>
+                    </div>
+                </div>
+    
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <a type="button" id="eliminar_publicacion_dialogo_aceptar" class="btn btn-primary-modal">Aceptar<i class="fa fa-check ml-1"></i></a>
+                    <a type="button" id="eliminar_publicacion_dialogo_cancelar" class="btn btn-outline-secondary-modal waves-effect" data-dismiss="modal">Cancelar</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Central Modal Medium Warning-->
+
+    <!-- Insertar actualizar datos publicacion -->
+    <div class="modal fade" id="modalPublicacionData" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog cascading-modal modal-lg publicacion" role="document">
+            <!--Content-->
+            <div class="modal-content">
+    
+                <!--Header-->
+                <div class="modal-header light-blue darken-3 white-text form-header index">
+                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="title"><i class="fa fa-pencil"></i> Datos Publicacion </h4>
+                </div>
+                
+                <!--Body-->
+                <div class="modal-body mb-0">
+                    
+                    <div class="md-form form-lg">
+                        <i class="fa fa-th-list prefix icon-form-publicacion"></i>
+                        <input type="text" id="titulo" class="form-control" value="{{publicacion.titulo}}">
+                        <label for="titulo" >Titulo</label>
+                    </div>
+                    <div class="md-form form-lg">
+                        <i class="fa fa-book prefix icon-form-publicacion"></i>
+                        <textarea type="text" id="descripcion" class="md-textarea mb-0 profile">{{publicacion.descripcion}}</textarea>
+                        <label for="descripcion">Descripcion</label>
+                    </div>
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-6">
+                            <div class="md-form form-lg">
+                                <i class="fa fa-users prefix"></i>
+                                <input type="number" min=0 id="numero_gourmets" class="form-control" value="{{publicacion.plazasTotales}}">
+                                <label for="numero_gourmets">Número Gourmets</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            
+                            <div class="md-form form-lg">
+                                <i class="fa fa-money prefix"></i>
+                                <input type="number" min=0 id="precio" class="form-control" value="{{publicacion.precio}}">
+                                <label for="precio">Precio</label>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-6">
+                            <div class="md-form form-lg">
+                                <i class="fa fa-calendar prefix"></i>
+                                <input type="text" id="fecha" class="form-control datepicker" value="{{publicacion.fecha | date('d-m-Y')}}">
+                                <label for="fecha">Fecha</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            
+                            <div class="md-form form-lg">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        
+                                        <i class="fa fa-home prefix icon-form-publicacion"></i>
+                                        
+                                    </div>
+                                    <div class="col-md-10">
+                                        <select id="domicilio" class="mdb-select">
+                                            <option value="-1" disabled selected>Domicilio</option>
+                                            {% for domicilio in user_view.perfil.domicilios %}
+                                                {% set imagenes_domicilio = domicilio.imagenes %}
+                                                {% set imagen_dom =  asset( imagenes_domicilio is null ? "uploads/Domicilio/domicilio-default.png" : "uploads/Domicilio/#{imagenes_domicilio[0]}") %}
+                                                
+                                                <option value="{{domicilio.id}}" data-icon="{{imagen_dom}}" class="rounded-circle"
+                                                        {{ isInsert is defined == false and publicacion.domicilio.id == domicilio.id ? 'selected' : ''}}>
+                                                    {{-domicilio.direccion-}}
+                                                </option>
+                                                
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                    
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        
+                        <div class="col-md-6">
+                            <div class="md-form form-lg">
+                                <i class="fa fa-clock-o prefix"></i>
+                                <input type="text" id="horaInicio" class="form-control" value="{{publicacion.horaInicio | date('H:i')}}">
+                                <label for="horaInicio">Hora Inicio</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            
+                            <div class="md-form form-lg">
+                                <i class="fa fa-clock-o prefix"></i>
+                                <input type="text" id="horaFin" class="form-control" value="{{publicacion.horaFin | date('H:i')}}">
+                                <label for="horaFin">Hora Fin</label>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    
+                    <div class="md-form form-lg">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <i class="fa fa-cutlery prefix icon-form-publicacion"></i>
+                            </div>
+                            <div class="col-md-11">
+                                <div id="platos" class="chips chips-placeholder"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="text-center mt-1-half">
+                        <button id="button-update-data-publicacion" class="btn btn-primary waves-effect waves-light">Aceptar <i class="fa fa-check ml-1"></i></button>
+                    </div>
+    
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+
+    {% include 'secondary_templates/footer.html.twig' %}
+    
+{% endblock %}
+
+{% block javascripts %}
+
+    {{parent()}}
+    
+    {% if isInsert is defined or isUpdate is defined %}
+    
+        <script src="{{asset('js/mdb-pro.min.js')}}"></script>
+        <script src="{{asset('js/moment.js')}}"></script>
+        <script type="text/javascript">
+            
+            $(document).ready(function() {
+                
+                //Data
+                var isUpdate                   = "{{ isUpdate is defined ? true : false }}";
+                var publicacion                = {{ publicacion.toArray()|json_encode|raw }};
+                var usuario                    = {{ user_view.toArray()|json_encode|raw }};
+                var platos_publicacion         = publicacion.platos == null ? [] : publicacion.platos;
+                var domicilios                 = usuario.perfil == null ? [] : usuario.perfil.domicilios;
+    
+                var platos_data                = [];
+    
+                for ( var i = 0; i < platos_publicacion.length; i++ ) {
+                    
+                    platos_data.push({"tag": platos_publicacion[i]});
+                }
+    
+                
+                //Variables UI
+                var titulo_dialogo             = $('#titulo');
+                var descripcion_dialogo        = $('#descripcion');
+                var file_input                 = $("#file-input-publicacion");
+                var numero_gourmets_dialogo    = $('#numero_gourmets');
+                var precio_dialogo             = $('#precio');
+                var fecha_dialogo              = $('#fecha');
+                var domicilio_dialogo          = $('#domicilio');
+                var horaInicio_dialogo         = $('#horaInicio');
+                var horaFin_dialogo            = $('#horaFin');
+                
+                var titulo_body                = $("#titulo_publicacion");
+                var descripcion_body           = $("#descripcion_publicacion");
+                var foto_body                  = $("#foto_publicacion");
+                var numero_gourmets_body       = $("#numero_gourmets_publicacion");
+                var precio_body                = $("#precio_publicacion");
+                var fecha_body                 = $("#fecha_publicacion");
+                var domicilio_body             = $("#domicilio_publicacion");
+                var horaInicio_body            = $("#horaInicio_publicacion");
+                var horaFin_body               = $("#horaFin_publicacion");
+                var platos_body                = $("#platos_publicacion");
+                
+                //Inicializamos select domicilio
+                $('.mdb-select').material_select();
+                
+                //Inicializamos picker fecha
+                $('.datepicker').pickadate({
+                  container: '#modalPublicacionData',
+                  containerHidden: '#modalPublicacionData',
+                  min: true,
+                  max: false,
+                  format: 'dd-mm-yyyy',
+                  formatSubmit: 'dd-mm-yyyy'
+                });
+                
+                //Inicializamos picker hora
+                horaInicio_dialogo.pickatime({
+                    twelvehour: true
+                });
+                
+                
+                horaFin_dialogo.pickatime({
+                    twelvehour: true
+                });
+                
+                //Inicializamos chips platos
+                $('.chips-placeholder').material_chip({
+                    placeholder: 'Platos',
+                    secondaryPlaceholder: 'Platos',
+                    data: platos_data
+                });
+                
+                
+                //Cuando se cierre el dialogo modal almacenamos la informacion
+                $('#modalPublicacionData').on('hidden.bs.modal', function (e) {
+                   
+                    var titulo      = titulo_dialogo.val();
+                    var descripcion = descripcion_dialogo.val();
+                    var gourmets    = numero_gourmets_dialogo.val();
+                    var precio      = precio_dialogo.val();
+                    var fecha       = fecha_dialogo.val();
+                    var domicilio   = domicilio_dialogo.val()  == null ? -1 : parseInt(domicilio_dialogo.val());
+                    var horaInicio  = horaInicio_dialogo.val();
+                    var horaFin     = horaFin_dialogo.val();
+                    
+                    //Formateamos horaInicio y horaFin
+                    horaInicio = moment(horaInicio, ["h:mm A"]).format("HH:mm");
+                    horaFin    = moment(horaFin, ["h:mm A"]).format("HH:mm");
+                    
+                    //Obtenemos los platos
+                    var platos = [];
+                    var chips  = $('.chips').material_chip('data');
+                    
+                    for ( var i = 0; i < chips.length; i++ ) {
+                        
+                        var chip = chips[i];
+                        platos.push(chip.tag);    
+                    }
+                    
+                    //Cargamos los datos UI
+                    titulo_body.text(!titulo.trim() ? titulo_body.text() : titulo);
+                    descripcion_body.text(descripcion);
+                    numero_gourmets_body.text(gourmets);
+                    precio_body.text(precio + " €");
+                    fecha_body.text(fecha);
+                    horaInicio_body.text(horaInicio);
+                    horaFin_body.text(horaFin);
+                    
+                    
+                    //Guardamos los platos
+                    platos_body.empty();
+                    
+                    for ( var i = 0; i < platos.length; i++ ) {
+                        
+                        platos_body.append("<div class='chip'>" + platos[i] + "</div>");
+                    }
+                    
+                    //Cargamos el domicilio
+                    //La funcion grep nos permite filtrar dentro de un array y obtener los valores que necesitemos 
+                    //que cumplan con los parametros definidos en la funcion anonima
+                    var domicilio_seleccionado = $.grep(domicilios, function(e){ return e.id == domicilio; });
+                    var direccion              = domicilio_seleccionado.length == 0 ? domicilio_body.text() : domicilio_seleccionado[0].direccion;
+                    
+                    domicilio_body.text(direccion);
+                    
+                    //Cargamos datos en la publicacion
+                    publicacion.titulo         = titulo;
+                    publicacion.descripcion    = descripcion;
+                    publicacion.plazasTotales  = gourmets;
+                    publicacion.precio         = precio;
+                    publicacion.domicilio      = domicilio;
+                    publicacion.fecha          = fecha;
+                    publicacion.horaInicio     = horaInicio;
+                    publicacion.horaFin        = horaFin;
+                    publicacion.platos         = platos;
+                    publicacion.foto           = publicacion.foto != null && publicacion.foto.indexOf("publicacion-image-default.jpg") > 0 ? "" : publicacion.foto;   
+                });
+                
+                
+                
+                //Selector de la imagen
+                file_input.change(function() {
+                    
+                    if (this.files && this.files[0]) {
+                        
+                        var fileType = this.files[0]["type"];
+                        var ValidImageTypes = ["image/gif", "image/jpeg", "image/png"];
+                        if ($.inArray(fileType, ValidImageTypes) >= 0) {
+                           
+                            var reader     = new FileReader();
+                            /*reader.onloadstart    = showProgress;
+                            reader.onprogress     = onProgress;
+                            reader.onloadend      = hideProgress;*/
+                            reader.onload         = imageIsLoaded;
+                        
+                            reader.readAsDataURL(this.files[0]);
+                            
+                        }
+                        
+                    }
+                    
+                });
+                
+                function imageIsLoaded(e) {
+                    
+                    //El evento nos devuelve la imagen en base64
+                    publicacion.foto = e.target.result;
+                    foto_body.css('background-image', 'url(' + e.target.result + ')');
+                };
+                
+                //Elementos que muestran y ocultan el dialogo
+                document.getElementById("on-update-data-publicacion").addEventListener('click', function(){
+                   
+                    $('#modalPublicacionData').modal('show');
+                });
+                
+                document.getElementById('button-update-data-publicacion').addEventListener('click', function(){
+                    
+                   $('#modalPublicacionData').modal('hide');
+                    
+                });
+                
+                //Insertar o actualizar perfil
+                document.getElementById('save-button').addEventListener('click', function(){
+                   
+                   
+                   var url_api   = isUpdate ? "{{ path('put_all_request', {'className': 'publicacion', 'id': publicacion.id })}}" 
+                                            : "{{path('post_all_request', {'className': 'publicacion'}) }}";
+                   var token     = "{{ getTokenUser(user_view) }}";
+                   
+                   $.ajax({
+                        url: url_api,
+                        headers: {'Authorization': 'Bearer ' + token},
+                        type: isUpdate ? 'PUT' : 'POST',
+                        data: publicacion,
+                        success: function (response) {
+                            
+                            if ( response.error != 0 ) {
+                                
+                                //Dialogo modal
+                                $('#error-text').text(response.data);
+                                $('#centralModalDanger').modal('show');
+                                
+                            }
+                            else {
+                                
+                                //Dialogo OK
+                                $('#success-text').text(isUpdate ? response.data : "Publicacion insertada correctamente");
+                                $('#centralModalSuccess').modal('show');
+                                $('#centralModalSuccess').on('hidden.bs.modal', function(){
+                                   
+                                   //Si actualizamos se refresca la página y si se inserta nos cambiamos de página
+                                    if ( isUpdate) {
+                                        
+                                        location.reload(true); 
+                                    }
+                                    else {
+                                        
+                                        //Debido a que la ruta se carga con la carga de la pagina debemos de agregarla a posteriori
+                                        var urlController = "publicacion/" + response.data;
+                                        
+                                        window.location.href = urlController;
+                                    }
+                                });
+                            }
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            
+                           $('#error-text').text("Datos enviados incorrectos, por favor reviselos e intentelo de nuevo");
+                           $('#centralModalDanger').modal('show');
+                        }
+                    });
+                   
+                }, false);
+                
+                
+                if ( isUpdate ) {
+                    
+                    document.getElementById('eliminar_publicacion').addEventListener('click', function(){
+                        
+                        $('#centralModalWarning').modal('show');
+                    });
+                    
+                    document.getElementById('eliminar_publicacion_dialogo_aceptar').addEventListener('click', function(){
+                        
+                        //Cerramos el dialogo
+                        $('#centralModalWarning').modal('hide');
+                        
+                        //Eliminamos la publicacion
+                        var url_api_delete = "{{ path('delete_request', {'className' : 'publicacion', 'id' : publicacion.id }) }}";
+                        var token          = "{{ getTokenUser(user_view) }}";
+                        
+                        $.ajax({
+                            url: url_api_delete,
+                            headers: {'Authorization': 'Bearer ' + token},
+                            type: 'DELETE',
+                            success: function (response) {
+                                
+                                if ( response.error != 0 ) {
+                                    
+                                    //Dialogo modal
+                                    $('#error-text').text(response.data);
+                                    $('#centralModalDanger').modal('show');
+                                    
+                                }
+                                else {
+                                    
+                                    //Dialogo OK
+                                    $('#success-text').text(isUpdate ? response.data : "Publicacion eliminada correctamente");
+                                    $('#centralModalSuccess').modal('show');
+                                    $('#centralModalSuccess').on('hidden.bs.modal', function(){
+                                       
+                                       //Si actualizamos se refresca la página y si se inserta nos cambiamos de página
+                                        var urlController = "{{ path('homepage')}}";
+                                        window.location.href = urlController;
+                                        
+                                    });
+                                }
+                            },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                
+                               $('#error-text').text("Ha ocurrido un problema con el servidor, intentelo de nuevo más tarde");
+                               $('#centralModalDanger').modal('show');
+                            }
+                        });
+                        
+                });
+                    
+                document.getElementById('eliminar_publicacion_dialogo_cancelar').addEventListener('click', function(){
+                        
+                    $('#centralModalWarning').modal('hide');
+                });
+            }
+                
+        });
+            
+        </script>
+    
+    {% else %}
+    
+        <script src="{{asset('js/moment.js')}}"></script>
+        <script src="{{asset('js/moment-timezone.js')}}"></script>
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+            
+                var publicacion_id = parseInt("{{ publicacion.id }}"); 
+                var my_user_id     = parseInt("{{user_view.id}}");
+                var token          = "{{ getTokenUser(user_view) }}";
+                var isCompleto     = "{{ isCompleto is defined ? '1' : '0' }}";
+                var hasReserva     = "{{ hasReserva is defined ? hasReserva : '0' }}";
+                
+                if ( isCompleto )  {
+                    
+                    document.getElementById("gestionar_reserva").addEventListener('click', function(){
+                    
+                        if ( hasReserva > 0 ) {
+                            
+                            //Mostramos el modal de Warning
+                            $('#centralModalWarning').modal('show');
+                            
+                        }
+                        else {
+                            
+                            //Generamos la reserva
+                            var url_api_insert = "{{ path('post_all_request', {'className': 'reserva'}) }}";
+                            var reserva        = {"publicacion": publicacion_id, "usuario": my_user_id};
+                            
+                            $.ajax({
+                                url: url_api_insert,
+                                headers: {'Authorization': 'Bearer ' + token},
+                                type: 'POST',
+                                data: reserva,
+                                success: function (response) {
+                                            
+                                    if ( response.error != 0 ) {
+                                            
+                                        //Dialogo modal
+                                        $('#error-text').text(response.data);
+                                        $('#centralModalDanger').modal('show');
+                                                
+                                    }
+                                    else {
+                                                
+                                        //Dialogo OK
+                                        $('#success-text').text("Reserva realizada correctamente");
+                                        $('#centralModalSuccess').modal('show');
+                                        $('#centralModalSuccess').on('hidden.bs.modal', function(){
+                                                   
+                                           location.reload(true); 
+            
+                                        });
+                                    }
+                                },
+                                error: function (xhr, ajaxOptions, thrownError) {
+                                            
+                                   $('#error-text').text("Ha ocurrido un problema con el servidor, intentelo de nuevo más tarde");
+                                   $('#centralModalDanger').modal('show');
+                                }
+                            });
+                            
+                        }
+                        
+                        
+                    });
+                    
+                    document.getElementById('eliminar_publicacion_dialogo_aceptar').addEventListener('click', function(){
+                        
+                        //Cerramos el dialogo
+                        $('#centralModalWarning').modal('hide');
+                                
+                        //Eliminamos la publicacion
+                        var url_api_delete = "{{ path('delete_request', {'className': 'reserva', 'id': hasReserva is defined ? hasReserva : 0}) }}";
+                        
+                        $.ajax({
+                            url: url_api_delete,
+                            headers: {'Authorization': 'Bearer ' + token},
+                            type: 'DELETE',
+                            success: function (response) {
+                                      
+                                if ( response.error != 0 ) {
+                                        
+                                    //Dialogo modal
+                                    $('#error-text').text(response.data);
+                                    $('#centralModalDanger').modal('show');
+                                            
+                                }
+                                else {
+                                            
+                                    //Dialogo OK
+                                    $('#success-text').text("Reserva eliminada correctamente");
+                                    $('#centralModalSuccess').modal('show');
+                                    $('#centralModalSuccess').on('hidden.bs.modal', function(){
+                                               
+                                        location.reload(true); 
+                                                
+                                    });
+                                }
+                            },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                        
+                               $('#error-text').text("Ha ocurrido un problema con el servidor, intentelo de nuevo más tarde");
+                               $('#centralModalDanger').modal('show');
+                            }
+                        });
+                                
+                    });
+                            
+                    document.getElementById('eliminar_publicacion_dialogo_cancelar').addEventListener('click', function(){
+                                    
+                        $('#centralModalWarning').modal('hide');
+                    });
+                    
+                    
+                }
+                
+                
+                
+            });
+            
+        </script>
+    {% endif %}
+    
+{% endblock%}

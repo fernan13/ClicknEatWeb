@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% if logged is defined == false %}
+    {% set logged = app.session.get('logged') %}
+{% endif %}
+
+{% block header %}
+
+    {% set vars = {'logged': logged} %}
+    {% include 'secondary_templates/header.html.twig' with vars %}
+    
+{% endblock %}
+
+{% block body %}
+    
+    {% if logged == false %}
+        
+        {% include 'terciary_templates/index-not-login.html.twig' %}
+        
+    {% else %}
+        
+        {% include 'terciary_templates/index-login.html.twig' with {javascripts: block('javascripts')} %}   
+        
+    {% endif %}
+
+{% endblock %}
+
+{% block footer %}
+
+    {% include 'secondary_templates/footer.html.twig' %}
+
+{% endblock %}

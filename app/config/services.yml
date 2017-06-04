@@ -1,0 +1,59 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/service_container.html
+parameters:
+#    parameter_name: value
+    my_user_provider.class: AppBundle\Security\Core\User\FOSUBUserProvider
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+    app.utils:
+        class: AppBundle\Service\Utils
+        arguments: [ "@doctrine.orm.entity_manager", "%api_geocode%", "@router" ]
+    
+    app.publicacion_domicilio_validator:
+        class: AppBundle\Validator\Constraints\PublicacionDomicilioValidator
+        arguments: ["@service_container"]
+        tags:
+            - { name: validator.constraint_validator }
+    
+    app.listener.changeDB:
+        class: AppBundle\Event\Listener\DBChangeListener
+        arguments: ["@service_container"]
+        tags:
+          - { name: doctrine.event_listener, event: prePersist }
+          - { name: doctrine.event_listener, event: preUpdate }
+          - { name: doctrine.event_listener, event: preRemove }
+    
+    app.file_manager:
+        class: AppBundle\Service\FileManager
+        arguments: ['%Domicilio_directory%', '%PerfilUsuario_directory%', '%Publicacion_directory%']
+        
+    my_user_provider:
+        class: "%my_user_provider.class%"
+        #this is the place where the properties are passed to the UserProvider - see config.yml
+        arguments: ['@fos_user.user_manager', {facebook: facebook_id, google: google_id}]
+    
+    app.firebase_manager:
+        class: AppBundle\Service\FirebaseManager
+        arguments: ['%firebase_url%', '%firebase_web_key%']
+        tags:
+          - { name: doctrine.event_listener, event: postPersist }
+          - { name: doctrine.event_listener, event: preRemove }
+          
+    app.jwt_token_authenticator:
+        class: AppBundle\Security\JwtAuthenticator
+        arguments: ['@doctrine.orm.entity_manager', '@lexik_jwt_authentication.encoder']
+        
+        
+    app_twig_utils:
+        class: AppBundle\Twig\ExtensionsTwig
+        arguments: ["@service_container"]
+        #Con autowire true automaticamente symfony busca el tipo de objeto y se lo pasa como parámetro#
+        autowire: true
+        public: false
+        tags:
+            - { name: twig.extension }
+        

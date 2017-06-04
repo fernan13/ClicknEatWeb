@@ -1,0 +1,486 @@
+/* YOUR CUSTOM STYLES */
+@import url(animate.css);
+@import url(material-datetime-picker.css);
+@import url(themes_stars/fontawesome-stars.css);
+
+.background-image-responsive {
+    
+    background-size: cover !important;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+}
+
+.background-image-responsive.full-page {
+    
+    width: 100%;
+    height: 100%;
+}
+
+
+.flex-vertical-align {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.background-image-responsive div.overlay {
+    
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .6);
+}
+
+.light-blue-skin .form-header.index, .light-blue-skin .card-header.index {
+    background-color: rgb(23, 79, 111)!important;
+}
+
+.no-padding {
+    
+    padding: 0px!important;
+}
+
+.no-margin-top {
+    
+    margin-top: 0px!important;
+}
+
+.breadcrumb-item.white-letter {
+    
+    color: white!important;
+}
+
+/********
+
+    Index style
+
+********/
+
+main.index {
+    
+    padding-top: 3.5rem !important;
+}
+
+.background-image-responsive.header-index-section {
+    
+    height: 350px;
+}
+
+.background-image-responsive.header-index-section div.overlay {
+    
+    background-color: rgba(0,0,0,.5);    
+}
+
+.background-image-index.overlay {
+    background-color: rgba(0,0,0,.5);    
+
+}
+
+.header-index-section .title-text {
+    
+    padding-top: 90px;
+    padding-bottom: 100px;
+    z-index: 1;
+    position: relative;
+}
+
+.header-index-section h1 {
+    font-size: 44px;
+    margin-top: 0;
+}
+
+.header-index-section h3 {
+    font-size: 20px;
+    margin: 20px auto 0;
+    font-weight: 300;
+    text-transform: none;
+    line-height: 1.6em;
+    letter-spacing: .02em;
+}
+
+.header-index-section h1, .header-index-section h3 {
+    color: #fff;
+}
+
+main div.index-2 {
+        
+    height: 250px;
+}
+
+main div.image-profile-avatar {
+    
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #fff;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    z-index: 99;
+}
+
+div.user-info {
+    
+    background-color: rgb(23, 79, 111)!important;
+    padding: 60px 15px 30px;
+    position: relative;
+}
+
+div.quote {
+    
+    text-align: center;
+    color: white;
+}
+
+div.quote .user-metadata  span.name {
+    
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+
+div.quote .user-metadata  span.about {
+    
+    font-size: 12px;
+    color: white;
+    letter-spacing: 0.05em;
+}
+
+div.quote p.user-description {
+
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: .02em;
+    line-height: 170%;
+    margin: 30px 0 0;    
+}
+
+.index.user-description {
+    
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: .02em;
+    line-height: 170%;
+    margin: 30px 0 0;
+}
+
+.index-info {
+    margin: 40px 0;
+}
+
+.index-details {
+    
+    padding: 2%;
+    margin: 8%;
+    
+}
+
+.index-details  p, .index-details h2 {
+    padding-left: 60px;
+    margin-top: 0;
+}
+
+.index-icon {
+    
+    float: left;
+    font-size: 2.5rem;
+    color: #5da4b5;
+}
+
+p.lead {
+    font-size: 18px;
+    line-height: 150%;
+    color: #5F5F5F;
+}
+
+.lead {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.gray {
+    
+    background-color: #F4F4F4;
+}
+
+.how-works {
+    
+    padding: 50px 15px;
+    text-align: center;
+}
+
+.how-works img {
+    
+    max-width: 150px;
+    margin: 40px 0 20px;
+    outline: 0;
+    border: none;
+}
+
+.how-works h5 {
+    
+    font-weight: bold;
+}
+
+
+/**********************************************************
+
+    Drawer
+
+***************************************************************/
+
+ul.click-drawer .logo-wrapper a {
+    height: 225px!important;
+}
+
+ul.click-drawer .logo-wrapper a img {
+   border-radius: 50%!important;
+}
+
+ul.click-drawer .logo-wrapper {
+    height: 200px!important;
+}
+
+/*******************************************************
+
+    Index
+**************************************************/
+
+.carousel, 
+.carousel-item {
+    height: 100vh;
+}
+
+.click-eat-card {
+    
+    width: 100%;
+}
+
+.click-eat-card .eat-card-image {
+    
+    height: 350px;
+}
+
+.block-text-ellipsis {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/********************************************
+
+    Profile
+
+*********************************************/
+.carousel.click-eat-carousel,
+.carousel-item.click-eat-carousel {
+    
+    height: auto !important;
+}
+
+.click-eat-carousel.profile {
+    
+    height: 500px!important;
+}
+
+.image-review {
+    
+    width: 100px;
+    height: 100px;
+}
+
+.full {
+    
+    width: 100%;
+    height: 100%;
+}
+
+.md-form .prefix ~ textarea.profile {
+    
+    padding-top: 1.8rem!important;
+}
+
+.comment-image {
+    
+    height: 130px;
+    width: 130px;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 auto;
+}
+
+.md-textarea.profile {
+    
+    overflow-y: auto;
+}
+
+span.rating-form {
+    color: #757575;
+    font-size: 1rem;
+    cursor: text;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.gray-text-star {
+    
+    color: #d2d2d2;
+}
+
+.text-align-left {
+    
+    text-align: left!important;
+}
+
+.mt-15 {
+    margin-top: 1.5rem
+}
+
+/************************************************
+
+    Publicacion
+    
+**************************************************/
+
+.image-publicacion {
+    
+    height: 500px;
+}
+
+.icon-form-publicacion {
+    color: rgba(21, 73, 103, 0.73);
+}
+
+.cascading-modal.publicacion {
+    margin-top: 5%!important;
+}
+
+.primary-color-text {
+    color: #3d799c!important;
+}
+
+.btn .fa.right {
+    margin-left: 3px;
+}
+
+.btn .material-icons.right {
+    margin-left: 3px;
+}
+
+.btn .material-icons {
+    font-size: 1.1rem;
+    position: relative;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+
+/***************************************************
+    Media queries
+    
+***************************************************/
+@media screen and ( max-width: 576px ) {
+
+    .click-eat-card .eat-card-image {
+    
+        height: 200px;
+    }
+    
+    .image-publicacion {
+    
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 989px ) {
+    
+    main.index {
+    
+        padding-top: 3rem !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    main div.index-2 {
+        
+        height: 350px;
+    }
+    
+    div.user-info {
+    
+        padding:60px;
+    }
+    
+    div.quote dib.user-description {
+        font-size: 20px;
+    }
+    
+    .index-details p, .index-details h2 {
+        padding-left: 80px;
+    }
+    
+    .lead {
+        font-size: 21px;
+    }
+    
+    /*.index-details {
+        padding: 0 40px; 
+        margin: 40px 0; 
+    }*/
+}
+
+@media screen and (min-width: 991px) {
+
+    /*.index-details {
+        padding: 0 40px;
+        margin: 120px 0;
+    }*/
+    
+    .click-eat-card {
+        
+        height: 425px;
+    }
+    
+    
+    .click-eat-card .eat-card-image {
+    
+        height: 200px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    /*.index-details {
+         padding: 0 80px; 
+         margin: 120px 0; 
+    }*/
+}
+
+@media screen and (max-height: 910px) {
+    
+    ul.click-drawer .logo-wrapper img {
+        margin-top: 5%;
+    }
+}
+
+@media screen and ( max-height: 650px) {
+    
+    .background-image-responsive.full-page {
+    
+        height: auto !important;
+    }
+
+}

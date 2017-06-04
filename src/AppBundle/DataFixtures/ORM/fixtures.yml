@@ -1,0 +1,66 @@
+#En primer lugar indicamos con que tipo de objeto vamos a trabajar#
+AppBundle\Entity\Usuario:
+    usuario_{1..20}:
+        nombreUsuario: <username()>
+        clave: <password()>
+        correo: <email()>
+        
+AppBundle\Entity\Token:
+    
+    #Generamos un bucle donde se generan 10 objetos#
+    token_{1..15}:
+        #LLamamos a funciones de la libreria fake para generar datos fake#
+        valor: <text(50)>
+        usuario: '@usuario_*'
+
+AppBundle\Entity\PerfilUsuario:
+
+    profile_{1..20}:
+        nombre: <name()>
+        usuario: '@usuario_<current()>'
+        imagen: '50%? image_<current()>_<numberBetween(1, 200)>.jpeg : <current()>_<numberBetween(1, 200)>_image.jpeg'
+        
+AppBundle\Entity\Domicilio:
+
+    home_{1..20}:
+        direccion: <text(35)>
+        ubicacion: [<latitude()>, <longitude()>]
+        imagenes: ['image_<current()>_<numberBetween(1, 200)>.jpeg']
+        perfil: '@profile_<current()>'
+        
+        
+AppBundle\Entity\Conversacion:
+    
+    chats_{1..15}:
+        usuarioInicia: '@usuario_<current()>'
+        usuarioRecibe: '@usuario_*'
+
+AppBundle\Entity\Mensaje:
+
+    message_{1..200}:
+        usuarioEnvia: '@usuario_*'
+        conversacion: '@chats_*'
+        textoMensaje: <sentence()>
+        fechaEnvio: <dateTimeBetween("-50 days", "now")>
+        
+AppBundle\Entity\Publicacion:
+
+    publicacion_{1..20}:
+        horaInicio: <dateTimeBetween("-50 days", "now")>
+        horaFin: <dateTimeBetween("-50 days", "now")>
+        fecha: <dateTimeBetween("-50 days", "now")>
+        plazasTotales: <numberBetween(1, 10)>
+        plazasDisponibles: <numberBetween(1, 10)>
+        precio: <numberBetween(5, 20)>
+        usuario: '@usuario_<current()>'
+        domicilio: '@home_<current()>'
+        foto: '50%? image_<current()>_<numberBetween(1, 200)>.jpeg : <current()>_<numberBetween(1, 200)>_image.jpeg'
+        platos: [<text(20)>]
+        descripcion: <sentence()>
+        
+AppBundle\Entity\Reserva:
+
+    reserva_{1..20}:
+        publicacion: '@publicacion_<current()>'
+        usuario: '@usuario_<current()>'
+        

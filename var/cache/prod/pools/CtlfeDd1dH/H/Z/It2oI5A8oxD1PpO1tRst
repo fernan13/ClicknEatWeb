@@ -1,0 +1,4 @@
+<?php return array (
+  0 => 9223372036854775807,
+  1 => 'a:2:{i:0;O:31:"Doctrine\\ORM\\Mapping\\ManyToMany":7:{s:12:"targetEntity";s:22:"AppBundle\\Entity\\Token";s:8:"mappedBy";s:8:"usuarios";s:10:"inversedBy";N;s:7:"cascade";a:2:{i:0;s:7:"persist";i:1;s:6:"remove";}s:5:"fetch";s:4:"LAZY";s:13:"orphanRemoval";b:0;s:7:"indexBy";N;}i:1;O:44:"AppBundle\\Annotation\\EntityMappingAnnotation":4:{s:4:"type";s:5:"Token";s:10:"collection";b:1;s:12:"relationship";a:2:{s:6:"export";b:1;s:10:"columnName";s:10:"usuario_id";}s:5:"value";N;}}',
+);

@@ -1,0 +1,49 @@
+{# Obtenemos al usaurio logeado #}
+{% set user = app.session.get('user') %}
+
+<ul id="slide-out" class="side-nav hidden custom-scrollbar sn-bg-2 click-drawer">
+   <!-- Logo -->
+   <li>
+      <div class="logo-wrapper waves-light">
+         <a href="{{  path('profile_user', {'user': user.id}) }}">
+             <img src="{{asset("uploads/PerfilUsuario/#{user.perfil.imagen}")}}" class="img-fluid flex-center">
+        </a>
+      </div>
+   </li>
+   <!-- /.Logo -->
+   <!-- Social -->
+   <li>
+      <ul class="social">
+         <li><a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a></li>
+         <li><a class="icons-sm pin-ic"><i class="fa fa-pinterest"> </i></a></li>
+         <li><a class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a></li>
+         <li><a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a></li>
+      </ul>
+   </li>
+   <!-- /.Social -->
+   <!-- Search Form -->
+   <li>
+      <form class="search-form" role="search">
+         <div class="form-group waves-light">
+            <input type="text" class="form-control" placeholder="Search">
+         </div>
+      </form>
+   </li>
+   <!-- /.Search Form -->
+   <!-- Side navigation links -->
+   <li>
+      <ul class="collapsible collapsible-accordion">
+         <li>
+            <a href="{{ path('homepage') }}" class="collapsible-header waves-effect arrow-r"><i class="fa fa-home"></i>Inicio</a>
+         </li>
+         <li>
+            <a href="{{  path('profile_user', {'user': user.id}) }}" class="collapsible-header waves-effect arrow-r"><i class="fa  fa-user-circle"></i> Perfil</a>
+         </li>
+         <li>
+            <a href="{{  path('add_publicacion') }}" class="collapsible-header waves-effect arrow-r"><i class="fa fa-cutlery"></i>Nueva Publicacion</a>
+         </li>
+      </ul>
+   </li>
+   <!-- /.Side navigation links -->
+   <div class="sidenav-bg mask-strong"></div>
+</ul>

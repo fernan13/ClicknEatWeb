@@ -1,0 +1,99 @@
+{# Obtenemos al usaurio logeado #}
+{% set user = app.session.get('user') %}
+
+{% include 'terciary_templates/slider.html.twig' %}
+
+<main id="mainContainer">
+    
+    <div class="container">
+        
+        <section class="section">
+        
+            <div class="divider-new">
+                <h2 class="h2-responsive">Últimas publicaciones</h2>
+            </div>
+    
+            <div id="js-publicaciones-wrapper"></div>
+            
+        </section>
+    
+    </div>
+    
+    <!-- Streak Section -->
+    <div class="streak streak-lg streak-photo" style="background-image:url({{asset('img/background-index-4.jpg')}})">
+           
+        <div class="flex-center white-text pattern-1 background-image-index overlay light">
+            <ul>
+                <li class="text-center index user-description">
+                    <h1 class=" white-text">
+                        No hay amor más sincero que el amor a la comida.
+                    </h1>
+                </li>
+            </ul>
+        </div>
+            
+    </div>
+    <!-- /.Streak Section -->
+
+    <!-- Advantages Section -->
+    <section class="advantages grey lighten-3">
+           
+        <div class="container">
+               
+            <div class="row">
+                   
+                <div class="col-lg-4">
+                    <i class="fa fa-home rounded-circle mb-1" aria-hidden="true"></i>
+                    <h5><strong>Como en casa</strong></h5>
+                    <p>
+                        Con Click'nd Eat no tienes que preocuparte por comer bien fuera
+                        de casa, tan solo tendrás que buscar la publicación que mas
+                        te guste, reservar tu plaza y comer a cuerpo de rey.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <i class="fa fa-wechat rounded-circle mb-1" aria-hidden="true"></i>
+                    <h5><strong>Pregunta</strong></h5>
+                    <p>
+                        ¿Tienes una duda sobre una publicación y no sabes que hacer?
+                        No te preocupes, con Click'nd Eat podrás contactar con el dueño
+                        de la publicación en cualquier momento y así poder resolverla.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <i class="fa fa-lock rounded-circle mb-1" aria-hidden="true"></i>
+                    <h5><strong>Seguridad</strong></h5>
+                    <p>
+                        Gracias al sistema de calificaciones de Click'nd Eat podrás conocer
+                        en cualquier momento las opiniones del resto de los usuarios sobre
+                        la persona en la que estás interesada, ayudandote a tomar
+                        una buena elección. 
+                    </p>
+                </div>
+                
+            </div>
+            
+        </div>
+            
+    </section>
+        
+</main>
+
+{% block javascripts %}
+    
+    <script type="text/babel" src="{{ asset('js/api/publicaciones.react.js') }}"></script>
+    <script type="text/babel">
+    
+        var publicaciones_url     = "{{ path('api_get_all_request', {'className': 'publicacion'}) }}";
+        var publicacion_ver_url   = "{{ path('see_or_update_publicacion', {'publicacion' : 0}) }}";
+        var user_token            = "{{ getTokenUser(user) }}"
+        
+        ReactDOM.render(
+        
+            <NoteSection url = {publicaciones_url} user_token = {user_token}/>,
+            document.getElementById('js-publicaciones-wrapper')
+        );
+        
+    </script>
+    
+{% endblock %}
