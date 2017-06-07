@@ -241,7 +241,8 @@
                     if ( strpos($key, 'imagen') !== FALSE) {
                     
                         $assets = AppConstantes::getAssetsURL('PerfilUsuario'); 
-                        $value  = $value ? $assets."/$value" : "";
+                        $value  = $value ? $assets."/$value" : $assets."/perfilusuario-image-default.png";
+                       
                     }   
                     
                     $info = $value;

@@ -67,13 +67,24 @@
                 $imagen       = $user->toArray()['perfil']['imagen'];
                 $imagen       = !$imagen ? '-' : $imagen;
                 
+                //Calculamos el numero de mensajes del usuario y el numero de publicaciones
+                $repo          = $em->getRepository('AppBundle:Usuario');
+                $nPublicacion  = $user->getPublicaciones()->count();
+                $nConversacion = $repo->getNumberOfConversationNoRead($user)["mensajes"];
+                
+                $nPublicacion  = !$nPublicacion ? 0 : $nPublicacion;
+                $nConversacion = !$nConversacion ? 0 : $nConversacion;
+                
                 $jwtEncoder   = $this->get('lexik_jwt_authentication.encoder');
-                $token        = $jwtEncoder->encode(['username'         => $user->getUsername(),
-                                                     'idUsuario'        => $user->getId(), 
-                                                     'idPerfil'         => $user->getPerfil() ? $user->getPerfil()->getId() : 0, 
-                                                     'password'         => $password,
-                                                     'profile_picture'  => $imagen,
-                                                     'email'            => $user->getEmail()]);
+                $token        = $jwtEncoder->encode(['username'             => $user->getUsername(),
+                                                     'idUsuario'            => $user->getId(), 
+                                                     'idPerfil'             => $user->getPerfil() ? $user->getPerfil()->getId() : 0, 
+                                                     'password'             => $password,
+                                                     'profile_picture'      => $imagen,
+                                                     'nombre'               => $user->getPerfil()->getNombre(),
+                                                     'num_publicaciones'    => $nPublicacion,
+                                                     'num_conversaciones'   => $nConversacion,
+                                                     'email'                => $user->getEmail()]);
         
                 $json['error']  = 0;
                 $json['data']   = $token;

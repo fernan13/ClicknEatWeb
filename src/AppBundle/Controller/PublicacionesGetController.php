@@ -42,7 +42,7 @@
                 } 
                 
                 //Comprobamos los parametros del JSON
-                $keys        = array('lat', 'lng', 'distance');
+                $keys        = array('lat', 'lng', 'distance', 'metrics');
                 $json_keys   = array_keys($params);
                 
                 $has_keys    = count(array_intersect($json_keys, $keys)) == count($json_keys);

@@ -24,11 +24,11 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8ccf234bdfef6f2d9a45edff82de9ddfffbd3610e22c543e84da7e18699ee3b6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_8ccf234bdfef6f2d9a45edff82de9ddfffbd3610e22c543e84da7e18699ee3b6->enter($__internal_8ccf234bdfef6f2d9a45edff82de9ddfffbd3610e22c543e84da7e18699ee3b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":profile:profile.html.twig"));
+        $__internal_3c546d961089fc876ba3d3f79306275a68c74cf9df644804dc39a6b30e7941b4 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_3c546d961089fc876ba3d3f79306275a68c74cf9df644804dc39a6b30e7941b4->enter($__internal_3c546d961089fc876ba3d3f79306275a68c74cf9df644804dc39a6b30e7941b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":profile:profile.html.twig"));
 
-        $__internal_c6b30292a243c6675325bf499a258708b2a1edf75db8ce1217a3bbbd47cd5f30 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c6b30292a243c6675325bf499a258708b2a1edf75db8ce1217a3bbbd47cd5f30->enter($__internal_c6b30292a243c6675325bf499a258708b2a1edf75db8ce1217a3bbbd47cd5f30_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":profile:profile.html.twig"));
+        $__internal_6ef4d275cae58bb814e7afbf282d831bc52352615d655266d2849bcfc370d3dc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6ef4d275cae58bb814e7afbf282d831bc52352615d655266d2849bcfc370d3dc->enter($__internal_6ef4d275cae58bb814e7afbf282d831bc52352615d655266d2849bcfc370d3dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":profile:profile.html.twig"));
 
         // line 3
         if ((array_key_exists("logged", $context) == false)) {
@@ -38,21 +38,21 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_8ccf234bdfef6f2d9a45edff82de9ddfffbd3610e22c543e84da7e18699ee3b6->leave($__internal_8ccf234bdfef6f2d9a45edff82de9ddfffbd3610e22c543e84da7e18699ee3b6_prof);
+        $__internal_3c546d961089fc876ba3d3f79306275a68c74cf9df644804dc39a6b30e7941b4->leave($__internal_3c546d961089fc876ba3d3f79306275a68c74cf9df644804dc39a6b30e7941b4_prof);
 
         
-        $__internal_c6b30292a243c6675325bf499a258708b2a1edf75db8ce1217a3bbbd47cd5f30->leave($__internal_c6b30292a243c6675325bf499a258708b2a1edf75db8ce1217a3bbbd47cd5f30_prof);
+        $__internal_6ef4d275cae58bb814e7afbf282d831bc52352615d655266d2849bcfc370d3dc->leave($__internal_6ef4d275cae58bb814e7afbf282d831bc52352615d655266d2849bcfc370d3dc_prof);
 
     }
 
     // line 7
     public function block_header($context, array $blocks = array())
     {
-        $__internal_afab256421122d64484450608271610be9ef5a1be128edf3790ffa57165ba6b6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_afab256421122d64484450608271610be9ef5a1be128edf3790ffa57165ba6b6->enter($__internal_afab256421122d64484450608271610be9ef5a1be128edf3790ffa57165ba6b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_303dc9d2f7e451399905f1ff06bbb1ea1153eff8c15635b745325b2c06c9e244 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_303dc9d2f7e451399905f1ff06bbb1ea1153eff8c15635b745325b2c06c9e244->enter($__internal_303dc9d2f7e451399905f1ff06bbb1ea1153eff8c15635b745325b2c06c9e244_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
-        $__internal_8fcb6de350d85ed415669543b74fb265a71fdbc4e7e8c56b002f11d3f6e15620 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8fcb6de350d85ed415669543b74fb265a71fdbc4e7e8c56b002f11d3f6e15620->enter($__internal_8fcb6de350d85ed415669543b74fb265a71fdbc4e7e8c56b002f11d3f6e15620_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_1871f0531f4c60f5a0c9f1ff06d798587dbac80c8dede82ff198a746a48017e8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1871f0531f4c60f5a0c9f1ff06d798587dbac80c8dede82ff198a746a48017e8->enter($__internal_1871f0531f4c60f5a0c9f1ff06d798587dbac80c8dede82ff198a746a48017e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         // line 8
         echo "
@@ -66,21 +66,21 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
         echo "    
 ";
         
-        $__internal_8fcb6de350d85ed415669543b74fb265a71fdbc4e7e8c56b002f11d3f6e15620->leave($__internal_8fcb6de350d85ed415669543b74fb265a71fdbc4e7e8c56b002f11d3f6e15620_prof);
+        $__internal_1871f0531f4c60f5a0c9f1ff06d798587dbac80c8dede82ff198a746a48017e8->leave($__internal_1871f0531f4c60f5a0c9f1ff06d798587dbac80c8dede82ff198a746a48017e8_prof);
 
         
-        $__internal_afab256421122d64484450608271610be9ef5a1be128edf3790ffa57165ba6b6->leave($__internal_afab256421122d64484450608271610be9ef5a1be128edf3790ffa57165ba6b6_prof);
+        $__internal_303dc9d2f7e451399905f1ff06bbb1ea1153eff8c15635b745325b2c06c9e244->leave($__internal_303dc9d2f7e451399905f1ff06bbb1ea1153eff8c15635b745325b2c06c9e244_prof);
 
     }
 
     // line 14
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b17ec234806d8e69951325621db93f639496ac9e2569a7d755ffa44ae03112bf = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_b17ec234806d8e69951325621db93f639496ac9e2569a7d755ffa44ae03112bf->enter($__internal_b17ec234806d8e69951325621db93f639496ac9e2569a7d755ffa44ae03112bf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b884f25a6b4f8e1dc833ad9adb5c7cce6866b0abc1730d8815ebf37902ac1c6e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b884f25a6b4f8e1dc833ad9adb5c7cce6866b0abc1730d8815ebf37902ac1c6e->enter($__internal_b884f25a6b4f8e1dc833ad9adb5c7cce6866b0abc1730d8815ebf37902ac1c6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_63980578303a169facd81a5c2dd721cb85f96e8576eed2d18bb96f899e024719 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_63980578303a169facd81a5c2dd721cb85f96e8576eed2d18bb96f899e024719->enter($__internal_63980578303a169facd81a5c2dd721cb85f96e8576eed2d18bb96f899e024719_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_cc966c7c0c084f91887a32b67b8f07b6c840952f360fd0df064d51552f87f76b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cc966c7c0c084f91887a32b67b8f07b6c840952f360fd0df064d51552f87f76b->enter($__internal_cc966c7c0c084f91887a32b67b8f07b6c840952f360fd0df064d51552f87f76b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 15
         echo "
@@ -102,11 +102,15 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
             // line 29
             echo "                                    
                                         <label for=\"file-input-profile\" class=\"full\">
-                                            <div id=\"image-profile-user\" class=\"background-image-responsive full\" 
-                                            style=\"background-image:url(";
-            // line 32
+                                            <a alt=\"Cambiar imagen\">
+                                                
+                                                <div id=\"image-profile-user\" class=\"background-image-responsive full\" 
+                                                    style=\"background-image:url(";
+            // line 34
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/PerfilUsuario/" . $this->getAttribute($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "perfil", array()), "imagen", array()))), "html", null, true);
             echo ")\"></div>
+                                            </a>
+                                            
                                             
                                         </label>
                                     
@@ -115,16 +119,16 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                                        
                                     ";
         } else {
-            // line 40
+            // line 44
             echo "                                        
                                         <img class=\"background-image-responsive full\" style=\"background-image:url(";
-            // line 41
+            // line 45
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/PerfilUsuario/" . $this->getAttribute($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "perfil", array()), "imagen", array()))), "html", null, true);
             echo ")\">
                                         
                                     ";
         }
-        // line 43
+        // line 47
         echo "    
                                 </div>
                                 
@@ -150,11 +154,11 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                     </div>
                     <div class=\"col-lg-7\">
                         <h2 class=\"h2-responsive center-on-small-only product-name\"><strong>";
-        // line 67
+        // line 71
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "perfil", array()), "nombre", array()), "html", null, true);
         echo "</strong></h2>
                         <h4 class=\"h4-responsive center-on-small-only\"><span class=\"grey-text\"><small id=\"text-username\">";
-        // line 68
+        // line 72
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "username", array()), "html", null, true);
         echo "</small></span></h4>
 
@@ -170,7 +174,7 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                             <div id=\"collapseOne\" class=\"collapse show\" role=\"tabpanel\" aria-labelledby=\"headingOne\">
                                 <div id=\"text-descripcion\" class=\"card-block block-text-ellipsis\">
                                     ";
-        // line 81
+        // line 85
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "perfil", array()), "descripcion", array()), "html", null, true);
         echo "
                                 </div>
@@ -185,14 +189,14 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                             </div>
                             <div id=\"collapseTwo\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"headingTwo\">
                                 ";
-        // line 93
+        // line 97
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "perfil", array()), "domicilios", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["domicilio"]) {
-            // line 94
+            // line 98
             echo "                                    
                                     <div class=\"card-block\">";
-            // line 95
+            // line 99
             echo twig_escape_filter($this->env, $this->getAttribute($context["domicilio"], "direccion", array()), "html", null, true);
             echo "</div>
                                         
@@ -201,7 +205,7 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['domicilio'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 98
+        // line 102
         echo "                            </div>
                         </div>
                         <div class=\"card\">
@@ -214,7 +218,7 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                             <div id=\"collapseThree\" class=\"collapse\" role=\"tabpanel\" aria-labelledby=\"headingThree\">
                                 <div id=\"text-gustos\" class=\"card-block block-text-ellipsis\">
                                     ";
-        // line 109
+        // line 113
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "perfil", array()), "gustos", array()), "html", null, true);
         echo "
                                 </div>
@@ -228,22 +232,22 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                             <div class=\"col-md-12 center-on-small-only text-md-right\">
                                 
                                 ";
-        // line 120
+        // line 124
         if ((isset($context["isMe"]) ? $context["isMe"] : $this->getContext($context, "isMe"))) {
-            // line 121
+            // line 125
             echo "                                
                                     <button id=\"update_button\" class=\"btn btn-primary\"><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Modificar</button>
                                     <button id=\"save-button\" class=\"btn btn-primary\"><i class=\"fa fa-save\" aria-hidden=\"true\"></i> Guardar </button>
                                     
                                 ";
         } else {
-            // line 126
+            // line 130
             echo "                                
                                     <button id=\"comment-button\" class=\"btn btn-primary\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i> Valorar </button>
                                     
                                 ";
         }
-        // line 130
+        // line 134
         echo "                            </div>
                         </div>
                     </div>
@@ -262,26 +266,26 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                 <div class=\"row\">
                     <div class=\"col-md-12\">
                         ";
-        // line 147
+        // line 151
         $context["comentarios"] = $this->getAttribute($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "perfil", array()), "comentariosRecibidos", array());
-        // line 148
+        // line 152
         echo "                        ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["comentarios"]) ? $context["comentarios"] : $this->getContext($context, "comentarios")));
         foreach ($context['_seq'] as $context["_key"] => $context["comentario"]) {
-            // line 149
+            // line 153
             echo "                            <div class=\"row\">
                                 
                                 <div class=\"col-md-2 col-sm-3\">
                                 
                                     <a class=\"waves-light waves-effect waves-light\" href=\"";
-            // line 153
+            // line 157
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("profile_user", array("user" => $this->getAttribute($this->getAttribute($this->getAttribute($context["comentario"], "usuarioDa", array()), "usuario", array()), "id", array()))), "html", null, true);
             echo "\">
                                         
                                         <div class=\"image-review rounded-circle background-image-responsive\" 
                                              style=\"background-image: url(";
-            // line 156
+            // line 160
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/PerfilUsuario/" . $this->getAttribute($this->getAttribute($context["comentario"], "usuarioDa", array()), "imagen", array()))), "html", null, true);
             echo ")\">
                                             
@@ -295,68 +299,68 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                                     
                                     <div>
                                         <h4>";
-            // line 167
+            // line 171
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["comentario"], "UsuarioDa", array()), "nombre", array()), "html", null, true);
             echo "</h4>
                                         ";
-            // line 168
+            // line 172
             $context["rating"] = twig_round($this->getAttribute($context["comentario"], "puntuacion", array()), 0, "ceil");
-            // line 169
+            // line 173
             echo "                                        ";
             $context["diff"] = (5 - (isset($context["rating"]) ? $context["rating"] : $this->getContext($context, "rating")));
-            // line 170
+            // line 174
             echo "                                        
                                         
                                         <ul class=\"rating inline-ul\">
                                             
                                             ";
-            // line 174
+            // line 178
             if (((isset($context["rating"]) ? $context["rating"] : $this->getContext($context, "rating")) > 0)) {
                 echo "     
                                                 ";
-                // line 175
+                // line 179
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["rating"]) ? $context["rating"] : $this->getContext($context, "rating"))));
                 foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-                    // line 176
+                    // line 180
                     echo "                                                    <li><i class=\"fa fa-star amber-text\"></i></li>
                                                 ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 178
+                // line 182
                 echo "                                            ";
             }
-            // line 179
+            // line 183
             echo "                                            
                                             ";
-            // line 180
+            // line 184
             if (((isset($context["diff"]) ? $context["diff"] : $this->getContext($context, "diff")) >= 1)) {
-                // line 181
+                // line 185
                 echo "                                            
                                                 ";
-                // line 182
+                // line 186
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["diff"]) ? $context["diff"] : $this->getContext($context, "diff"))));
                 foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-                    // line 183
+                    // line 187
                     echo "                                                    <li><i class=\"fa fa-star gray-text-star\"></i></li>
                                                 ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 185
+                // line 189
                 echo "                                                
                                             ";
             }
-            // line 187
+            // line 191
             echo "                                        </ul>
                                         
                                         <p class=\"block-text-ellipsis\">
                                             ";
-            // line 190
+            // line 194
             echo twig_escape_filter($this->env, $this->getAttribute($context["comentario"], "valoracion", array()), "html", null, true);
             echo "
                                         </p>
@@ -371,7 +375,7 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comentario'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 199
+        // line 203
         echo "                        
 
                     </div>
@@ -389,15 +393,15 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                 <div id=\"multi-item-example\" class=\"carousel slide carousel-multi-item click-eat-carousel\" data-ride=\"carousel\">
 
                     ";
-        // line 215
+        // line 219
         $context["publicaciones"] = $this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "publicaciones", array());
-        // line 216
+        // line 220
         echo "                    ";
         $context["slider_number"] = twig_round((twig_length_filter($this->env, (isset($context["publicaciones"]) ? $context["publicaciones"] : $this->getContext($context, "publicaciones"))) / 3), 0, "ceil");
-        // line 217
+        // line 221
         echo "                    
                     ";
-        // line 218
+        // line 222
         if (((isset($context["slider_number"]) ? $context["slider_number"] : $this->getContext($context, "slider_number")) > 0)) {
             echo "    
                     
@@ -420,35 +424,35 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                         <div class=\"carousel-inner\" role=\"listbox\">
     
                             ";
-            // line 238
+            // line 242
             $context["min_index"] = 0;
-            // line 239
+            // line 243
             echo "                            ";
             $context["max_index"] = ((isset($context["min_index"]) ? $context["min_index"] : $this->getContext($context, "min_index")) + 3);
-            // line 240
+            // line 244
             echo "                                
                             ";
-            // line 241
+            // line 245
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["slider_number"]) ? $context["slider_number"] : $this->getContext($context, "slider_number"))));
             foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-                // line 242
+                // line 246
                 echo "                            
                                 <div class=\"carousel-item ";
-                // line 243
+                // line 247
                 echo ((($context["i"] == 1)) ? ("active") : (""));
                 echo " click-eat-carousel\">
                                 
                                     ";
-                // line 245
+                // line 249
                 echo "    
                                     ";
-                // line 246
+                // line 250
                 $context["max_index"] = ((((isset($context["max_index"]) ? $context["max_index"] : $this->getContext($context, "max_index")) > twig_length_filter($this->env, (isset($context["publicaciones"]) ? $context["publicaciones"] : $this->getContext($context, "publicaciones"))))) ? (twig_length_filter($this->env, (isset($context["publicaciones"]) ? $context["publicaciones"] : $this->getContext($context, "publicaciones")))) : ((isset($context["max_index"]) ? $context["max_index"] : $this->getContext($context, "max_index"))));
-                // line 247
+                // line 251
                 echo "                                    
                                     ";
-                // line 248
+                // line 252
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable(twig_slice($this->env, (isset($context["publicaciones"]) ? $context["publicaciones"] : $this->getContext($context, "publicaciones")), (isset($context["min_index"]) ? $context["min_index"] : $this->getContext($context, "min_index")), (isset($context["max_index"]) ? $context["max_index"] : $this->getContext($context, "max_index"))));
                 foreach ($context['_seq'] as $context["_key"] => $context["publicacion"]) {
@@ -460,32 +464,32 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                                                 <div class=\"view overlay hm-white-slight\">
                                                     
                                                     ";
-                    // line 255
+                    // line 259
                     if (twig_test_empty($this->getAttribute($context["publicacion"], "foto", array()))) {
-                        // line 256
+                        // line 260
                         echo "                            
                                                         <div class=\"eat-card-image background-image-responsive\"
                                                              style=\"background-image:url(";
-                        // line 258
+                        // line 262
                         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("uploads/Publicacion/publicacion-image-default.jpg"), "html", null, true);
                         echo ")\">
                                                              
                                                     ";
                     } else {
-                        // line 261
+                        // line 265
                         echo "                                                    
                                                         
                                                         <div class=\"eat-card-image background-image-responsive\" 
                                                              style=\"background-image:url(";
-                        // line 264
+                        // line 268
                         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/Publicacion/" . $this->getAttribute($context["publicacion"], "foto", array()))), "html", null, true);
                         echo ")\">
                                                     ";
                     }
-                    // line 266
+                    // line 270
                     echo "                                                    
                                                         <a href=\"";
-                    // line 267
+                    // line 271
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("see_or_update_publicacion", array("publicacion" => $this->getAttribute($context["publicacion"], "id", array()))), "html", null, true);
                     echo "\">
                                                             <div class=\"mask waves-light\"></div>
@@ -497,24 +501,24 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                                                 <div class=\"card-block text-center\">
                                                              
                                                     <a href=\"#\" class=\"text-muted\"><h5>";
-                    // line 276
+                    // line 280
                     echo twig_escape_filter($this->env, $this->getAttribute($context["publicacion"], "titulo", array()), "html", null, true);
                     echo "</h5></a>
                                                     <h4 class=\"card-title\"><strong><a href=\"#\">";
-                    // line 277
+                    // line 281
                     echo twig_escape_filter($this->env, $this->getAttribute($context["publicacion"], "titulo", array()), "html", null, true);
                     echo "</a></strong></h4>
                                         
                                                     <p class=\"card-text block-text-ellipsis\">
                                                          ";
-                    // line 280
+                    // line 284
                     echo twig_escape_filter($this->env, $this->getAttribute($context["publicacion"], "descripcion", array()), "html", null, true);
                     echo "
                                                     </p>
                                         
                                                     <div class=\"card-footer\">
                                                         <span class=\"left\">";
-                    // line 284
+                    // line 288
                     echo twig_escape_filter($this->env, $this->getAttribute($context["publicacion"], "precio", array()), "html", null, true);
                     echo "€</span>
                                                         <span class=\"right\">
@@ -533,15 +537,15 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['publicacion'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 297
+                // line 301
                 echo "                                    
                                     ";
-                // line 298
+                // line 302
                 $context["min_index"] = ((isset($context["min_index"]) ? $context["min_index"] : $this->getContext($context, "min_index")) + 3);
-                // line 299
+                // line 303
                 echo "                                    ";
                 $context["max_index"] = ((isset($context["min_index"]) ? $context["min_index"] : $this->getContext($context, "min_index")) + 3);
-                // line 300
+                // line 304
                 echo "                                
                                 
                                 </div>
@@ -551,13 +555,13 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 305
+            // line 309
             echo "                           
                         </div>
                         <!--/.Slides-->
                     ";
         }
-        // line 309
+        // line 313
         echo "                </div>
                 <!--/.Carousel Wrapper-->
 
@@ -653,7 +657,7 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                     <div class=\"md-form form-sm\">
                         <i class=\"fa fa-user prefix\"></i>
                         <input type=\"text\" id=\"nombre_usuario\" class=\"form-control\" value=\"";
-        // line 403
+        // line 407
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "perfil", array()), "nombre", array()), "html", null, true);
         echo "\">
                         <label for=\"nombre_usuario\">Nombre</label>
@@ -661,19 +665,19 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
     
                     <div class=\"md-form form-sm\">
                         <i class=\"fa fa-list prefix\"></i>
-                        <textarea type=\"text\" id=\"descripcion_usuario\" class=\"md-textarea mb-0 profile\" value=\"";
-        // line 409
+                        <textarea type=\"text\" id=\"descripcion_usuario\" class=\"md-textarea mb-0 profile\">";
+        // line 413
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "perfil", array()), "descripcion", array()), "html", null, true);
-        echo "\"></textarea>
+        echo "</textarea>
                         <label for=\"descripcion_usuario\">Descripcion</label>
                     </div>
     
                     <div class=\"md-form form-sm\">
                         <i class=\"fa fa-cutlery prefix\"></i>
-                        <textarea type=\"text\" id=\"gustos_usuario\" class=\"md-textarea mb-0 profile\" value=\"";
-        // line 415
+                        <textarea type=\"text\" id=\"gustos_usuario\" class=\"md-textarea mb-0 profile\">";
+        // line 419
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "perfil", array()), "gustos", array()), "html", null, true);
-        echo "\"></textarea>
+        echo "</textarea>
                         <label for=\"gustos_usuario\">Mis gustos</label>
                     </div>
     
@@ -698,7 +702,7 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                 <div class=\"modal-header\">
                     <div class=\"background-image-responsive rounded-circle comment-image\" 
                          style=\"background-image: url(";
-        // line 439
+        // line 443
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/PerfilUsuario/" . $this->getAttribute($this->getAttribute((isset($context["user_me"]) ? $context["user_me"] : $this->getContext($context, "user_me")), "perfil", array()), "imagen", array()))), "html", null, true);
         echo ")\"></div>
                 </div>
@@ -706,7 +710,7 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                 <div class=\"modal-body text-center mb-1\">
     
                     <h5 class=\"mt-1 mb-2\">";
-        // line 444
+        // line 448
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["user_me"]) ? $context["user_me"] : $this->getContext($context, "user_me")), "perfil", array()), "nombre", array()), "html", null, true);
         echo "</h5>
     
@@ -753,58 +757,58 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
 
 ";
         
-        $__internal_63980578303a169facd81a5c2dd721cb85f96e8576eed2d18bb96f899e024719->leave($__internal_63980578303a169facd81a5c2dd721cb85f96e8576eed2d18bb96f899e024719_prof);
+        $__internal_cc966c7c0c084f91887a32b67b8f07b6c840952f360fd0df064d51552f87f76b->leave($__internal_cc966c7c0c084f91887a32b67b8f07b6c840952f360fd0df064d51552f87f76b_prof);
 
         
-        $__internal_b17ec234806d8e69951325621db93f639496ac9e2569a7d755ffa44ae03112bf->leave($__internal_b17ec234806d8e69951325621db93f639496ac9e2569a7d755ffa44ae03112bf_prof);
+        $__internal_b884f25a6b4f8e1dc833ad9adb5c7cce6866b0abc1730d8815ebf37902ac1c6e->leave($__internal_b884f25a6b4f8e1dc833ad9adb5c7cce6866b0abc1730d8815ebf37902ac1c6e_prof);
 
     }
 
-    // line 489
+    // line 493
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_54bf4406e1b2a7208008ee7fd320c6cadbd55b9a6824bb055303bced7ad68be7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_54bf4406e1b2a7208008ee7fd320c6cadbd55b9a6824bb055303bced7ad68be7->enter($__internal_54bf4406e1b2a7208008ee7fd320c6cadbd55b9a6824bb055303bced7ad68be7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_9748d1dd86af494d1a9eb9244c4cd16ccc467ebf5e4e73d212cd9292627a4148 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_9748d1dd86af494d1a9eb9244c4cd16ccc467ebf5e4e73d212cd9292627a4148->enter($__internal_9748d1dd86af494d1a9eb9244c4cd16ccc467ebf5e4e73d212cd9292627a4148_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
-        $__internal_22b5907dd69532d96ff4a623f95fb3bc617c3fffb66c57aaa71b944e41ab6016 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_22b5907dd69532d96ff4a623f95fb3bc617c3fffb66c57aaa71b944e41ab6016->enter($__internal_22b5907dd69532d96ff4a623f95fb3bc617c3fffb66c57aaa71b944e41ab6016_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_00940d022cae0d768e52b69e26e2741a4082b5882984c80dc660c524e114593b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_00940d022cae0d768e52b69e26e2741a4082b5882984c80dc660c524e114593b->enter($__internal_00940d022cae0d768e52b69e26e2741a4082b5882984c80dc660c524e114593b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 490
+        // line 494
         echo "
     ";
-        // line 491
-        $this->loadTemplate("secondary_templates/footer.html.twig", ":profile:profile.html.twig", 491)->display($context);
-        // line 492
+        // line 495
+        $this->loadTemplate("secondary_templates/footer.html.twig", ":profile:profile.html.twig", 495)->display($context);
+        // line 496
         echo "    
 ";
         
-        $__internal_22b5907dd69532d96ff4a623f95fb3bc617c3fffb66c57aaa71b944e41ab6016->leave($__internal_22b5907dd69532d96ff4a623f95fb3bc617c3fffb66c57aaa71b944e41ab6016_prof);
+        $__internal_00940d022cae0d768e52b69e26e2741a4082b5882984c80dc660c524e114593b->leave($__internal_00940d022cae0d768e52b69e26e2741a4082b5882984c80dc660c524e114593b_prof);
 
         
-        $__internal_54bf4406e1b2a7208008ee7fd320c6cadbd55b9a6824bb055303bced7ad68be7->leave($__internal_54bf4406e1b2a7208008ee7fd320c6cadbd55b9a6824bb055303bced7ad68be7_prof);
+        $__internal_9748d1dd86af494d1a9eb9244c4cd16ccc467ebf5e4e73d212cd9292627a4148->leave($__internal_9748d1dd86af494d1a9eb9244c4cd16ccc467ebf5e4e73d212cd9292627a4148_prof);
 
     }
 
-    // line 495
+    // line 499
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_9fd0feef8324ec260ab905a5200f922531d1c6dc5d1302311a3f38ae1b6cee17 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_9fd0feef8324ec260ab905a5200f922531d1c6dc5d1302311a3f38ae1b6cee17->enter($__internal_9fd0feef8324ec260ab905a5200f922531d1c6dc5d1302311a3f38ae1b6cee17_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_d1bf9587dbde08341ca669bb3dd2e3cbfe82d9cfadcf266424abc691afba7c0f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_d1bf9587dbde08341ca669bb3dd2e3cbfe82d9cfadcf266424abc691afba7c0f->enter($__internal_d1bf9587dbde08341ca669bb3dd2e3cbfe82d9cfadcf266424abc691afba7c0f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_7c96ff4c20dd2fb5aa359d3ff135fbf048a89674514fb55d45d509e6e58c4d8d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7c96ff4c20dd2fb5aa359d3ff135fbf048a89674514fb55d45d509e6e58c4d8d->enter($__internal_7c96ff4c20dd2fb5aa359d3ff135fbf048a89674514fb55d45d509e6e58c4d8d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_eb4a82a19c3d696b3ddc4c2fd95ff1c3a98f8a318a80216384737bc194e11648 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_eb4a82a19c3d696b3ddc4c2fd95ff1c3a98f8a318a80216384737bc194e11648->enter($__internal_eb4a82a19c3d696b3ddc4c2fd95ff1c3a98f8a318a80216384737bc194e11648_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 496
+        // line 500
         echo "
     ";
-        // line 497
+        // line 501
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     
     ";
-        // line 499
+        // line 503
         if (((isset($context["isMe"]) ? $context["isMe"] : $this->getContext($context, "isMe")) == 1)) {
-            // line 500
+            // line 504
             echo "    
         <script type=\"text/javascript\">
             
@@ -812,7 +816,7 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                 
                 //Usuario completo cargado en javascript
                 var user         = ";
-            // line 506
+            // line 510
             echo twig_jsonencode_filter($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "toArray", array(), "method"));
             echo ";
                     
@@ -944,11 +948,11 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                    
                    
                    var url_api   = \"";
-            // line 635
+            // line 639
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("put_all_request", array("className" => "perfil-usuario", "id" => $this->getAttribute($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "perfil", array()), "id", array()))), "html", null, true);
             echo "\";
                    var token     = \"";
-            // line 636
+            // line 640
             echo twig_escape_filter($this->env, $this->env->getExtension('AppBundle\Twig\ExtensionsTwig')->getTokenUser((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view"))), "html", null, true);
             echo "\";
                    
@@ -1023,18 +1027,18 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
     
     ";
         } else {
-            // line 708
+            // line 712
             echo "    
         <script src=\"";
-            // line 709
+            // line 713
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.barrating.min.js"), "html", null, true);
             echo "\"></script>
         <script src=\"";
-            // line 710
+            // line 714
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/moment.js"), "html", null, true);
             echo "\"></script>
         <script src=\"";
-            // line 711
+            // line 715
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/moment-timezone.js"), "html", null, true);
             echo "\"></script>
         <script type=\"text/javascript\">
@@ -1042,15 +1046,15 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
             \$(document).ready(function(){
             
                 var url_api    = \"";
-            // line 716
+            // line 720
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("post_all_request", array("className" => "comentario"));
             echo "\";
                 var my_user_id = parseInt(\"";
-            // line 717
+            // line 721
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["user_me"]) ? $context["user_me"] : $this->getContext($context, "user_me")), "perfil", array()), "id", array()), "html", null, true);
             echo "\");
                 var token      = \"";
-            // line 718
+            // line 722
             echo twig_escape_filter($this->env, $this->env->getExtension('AppBundle\Twig\ExtensionsTwig')->getTokenUser((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view"))), "html", null, true);
             echo "\";
                 var comentario = {};
@@ -1079,7 +1083,7 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                    
                    //Calculamos la hora teniendo en cuenta las franjas horarias
                     var dateServer                  = \"";
-            // line 744
+            // line 748
             echo twig_escape_filter($this->env, $this->env->getExtension('AppBundle\Twig\ExtensionsTwig')->getDateFromServer(), "html", null, true);
             echo "\";
                     var timezone                    = moment.tz.guess();
@@ -1088,7 +1092,7 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                     comentario[\"valoracion\"]        = \$('#valoracion').val();
                     comentario[\"usuarioDa\"]         = my_user_id;
                     comentario[\"usuarioRecibe\"]     = parseInt(\"";
-            // line 750
+            // line 754
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["user_view"]) ? $context["user_view"] : $this->getContext($context, "user_view")), "perfil", array()), "id", array()), "html", null, true);
             echo "\"); 
                     comentario[\"fechaComentario\"]   = dateComentario;
@@ -1128,14 +1132,14 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
         </script>
     ";
         }
-        // line 787
+        // line 791
         echo "    
 ";
         
-        $__internal_7c96ff4c20dd2fb5aa359d3ff135fbf048a89674514fb55d45d509e6e58c4d8d->leave($__internal_7c96ff4c20dd2fb5aa359d3ff135fbf048a89674514fb55d45d509e6e58c4d8d_prof);
+        $__internal_eb4a82a19c3d696b3ddc4c2fd95ff1c3a98f8a318a80216384737bc194e11648->leave($__internal_eb4a82a19c3d696b3ddc4c2fd95ff1c3a98f8a318a80216384737bc194e11648_prof);
 
         
-        $__internal_9fd0feef8324ec260ab905a5200f922531d1c6dc5d1302311a3f38ae1b6cee17->leave($__internal_9fd0feef8324ec260ab905a5200f922531d1c6dc5d1302311a3f38ae1b6cee17_prof);
+        $__internal_d1bf9587dbde08341ca669bb3dd2e3cbfe82d9cfadcf266424abc691afba7c0f->leave($__internal_d1bf9587dbde08341ca669bb3dd2e3cbfe82d9cfadcf266424abc691afba7c0f_prof);
 
     }
 
@@ -1151,7 +1155,7 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
 
     public function getDebugInfo()
     {
-        return array (  1132 => 787,  1092 => 750,  1083 => 744,  1054 => 718,  1050 => 717,  1046 => 716,  1038 => 711,  1034 => 710,  1030 => 709,  1027 => 708,  952 => 636,  948 => 635,  816 => 506,  808 => 500,  806 => 499,  801 => 497,  798 => 496,  789 => 495,  778 => 492,  776 => 491,  773 => 490,  764 => 489,  710 => 444,  702 => 439,  675 => 415,  666 => 409,  657 => 403,  561 => 309,  555 => 305,  545 => 300,  542 => 299,  540 => 298,  537 => 297,  518 => 284,  511 => 280,  505 => 277,  501 => 276,  489 => 267,  486 => 266,  481 => 264,  476 => 261,  470 => 258,  466 => 256,  464 => 255,  452 => 248,  449 => 247,  447 => 246,  444 => 245,  439 => 243,  436 => 242,  432 => 241,  429 => 240,  426 => 239,  424 => 238,  401 => 218,  398 => 217,  395 => 216,  393 => 215,  375 => 199,  360 => 190,  355 => 187,  351 => 185,  344 => 183,  340 => 182,  337 => 181,  335 => 180,  332 => 179,  329 => 178,  322 => 176,  318 => 175,  314 => 174,  308 => 170,  305 => 169,  303 => 168,  299 => 167,  285 => 156,  279 => 153,  273 => 149,  268 => 148,  266 => 147,  247 => 130,  241 => 126,  234 => 121,  232 => 120,  218 => 109,  205 => 98,  196 => 95,  193 => 94,  189 => 93,  174 => 81,  158 => 68,  154 => 67,  128 => 43,  122 => 41,  119 => 40,  108 => 32,  103 => 29,  101 => 28,  86 => 15,  77 => 14,  66 => 11,  63 => 10,  61 => 9,  58 => 8,  49 => 7,  39 => 1,  36 => 4,  34 => 3,  11 => 1,);
+        return array (  1136 => 791,  1096 => 754,  1087 => 748,  1058 => 722,  1054 => 721,  1050 => 720,  1042 => 715,  1038 => 714,  1034 => 713,  1031 => 712,  956 => 640,  952 => 639,  820 => 510,  812 => 504,  810 => 503,  805 => 501,  802 => 500,  793 => 499,  782 => 496,  780 => 495,  777 => 494,  768 => 493,  714 => 448,  706 => 443,  679 => 419,  670 => 413,  661 => 407,  565 => 313,  559 => 309,  549 => 304,  546 => 303,  544 => 302,  541 => 301,  522 => 288,  515 => 284,  509 => 281,  505 => 280,  493 => 271,  490 => 270,  485 => 268,  480 => 265,  474 => 262,  470 => 260,  468 => 259,  456 => 252,  453 => 251,  451 => 250,  448 => 249,  443 => 247,  440 => 246,  436 => 245,  433 => 244,  430 => 243,  428 => 242,  405 => 222,  402 => 221,  399 => 220,  397 => 219,  379 => 203,  364 => 194,  359 => 191,  355 => 189,  348 => 187,  344 => 186,  341 => 185,  339 => 184,  336 => 183,  333 => 182,  326 => 180,  322 => 179,  318 => 178,  312 => 174,  309 => 173,  307 => 172,  303 => 171,  289 => 160,  283 => 157,  277 => 153,  272 => 152,  270 => 151,  251 => 134,  245 => 130,  238 => 125,  236 => 124,  222 => 113,  209 => 102,  200 => 99,  197 => 98,  193 => 97,  178 => 85,  162 => 72,  158 => 71,  132 => 47,  126 => 45,  123 => 44,  110 => 34,  103 => 29,  101 => 28,  86 => 15,  77 => 14,  66 => 11,  63 => 10,  61 => 9,  58 => 8,  49 => 7,  39 => 1,  36 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -1194,8 +1198,12 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
                                     {% if isMe %}
                                     
                                         <label for=\"file-input-profile\" class=\"full\">
-                                            <div id=\"image-profile-user\" class=\"background-image-responsive full\" 
-                                            style=\"background-image:url({{asset(\"uploads/PerfilUsuario/#{user_view.perfil.imagen}\")}})\"></div>
+                                            <a alt=\"Cambiar imagen\">
+                                                
+                                                <div id=\"image-profile-user\" class=\"background-image-responsive full\" 
+                                                    style=\"background-image:url({{asset(\"uploads/PerfilUsuario/#{user_view.perfil.imagen}\")}})\"></div>
+                                            </a>
+                                            
                                             
                                         </label>
                                     
@@ -1572,13 +1580,13 @@ class __TwigTemplate_f53968353e1d25675fc6f4fa9f79a02eafe111e2a20119ac3f7268d657a
     
                     <div class=\"md-form form-sm\">
                         <i class=\"fa fa-list prefix\"></i>
-                        <textarea type=\"text\" id=\"descripcion_usuario\" class=\"md-textarea mb-0 profile\" value=\"{{user_view.perfil.descripcion}}\"></textarea>
+                        <textarea type=\"text\" id=\"descripcion_usuario\" class=\"md-textarea mb-0 profile\">{{user_view.perfil.descripcion}}</textarea>
                         <label for=\"descripcion_usuario\">Descripcion</label>
                     </div>
     
                     <div class=\"md-form form-sm\">
                         <i class=\"fa fa-cutlery prefix\"></i>
-                        <textarea type=\"text\" id=\"gustos_usuario\" class=\"md-textarea mb-0 profile\" value=\"{{user_view.perfil.gustos}}\"></textarea>
+                        <textarea type=\"text\" id=\"gustos_usuario\" class=\"md-textarea mb-0 profile\">{{user_view.perfil.gustos}}</textarea>
                         <label for=\"gustos_usuario\">Mis gustos</label>
                     </div>
     

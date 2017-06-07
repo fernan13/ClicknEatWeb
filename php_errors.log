@@ -23485,3 +23485,112 @@ Stack trace:
 [04-Jun-2017 06:36:05 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/var/cache/prod/classes.php:7218
 [04-Jun-2017 06:36:05 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/var/cache/prod/classes.php:7263}() /home/ubuntu/workspace/var/cache/prod/classes.php:7263
 [04-Jun-2017 06:36:05 UTC] PHP   6. AppBundle\Controller\WebController->seeOrEditPublicacionAction() /home/ubuntu/workspace/var/cache/prod/classes.php:7263
+[05-Jun-2017 16:54:37 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/ubuntu/workspace/src/AppBundle/Validator/ValidatorListener.php on line 335
+[05-Jun-2017 16:54:37 UTC] PHP Stack trace:
+[05-Jun-2017 16:54:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/web/app.php:0
+[05-Jun-2017 16:54:37 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/web/app.php:17
+[05-Jun-2017 16:54:37 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:168
+[05-Jun-2017 16:54:37 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/var/cache/prod/classes.php:7218
+[05-Jun-2017 16:54:37 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/var/cache/prod/classes.php:7263}() /home/ubuntu/workspace/var/cache/prod/classes.php:7263
+[05-Jun-2017 16:54:37 UTC] PHP   6. AppBundle\Controller\AbstractApiPostController->insertObject() /home/ubuntu/workspace/var/cache/prod/classes.php:7263
+[05-Jun-2017 16:54:37 UTC] PHP   7. Doctrine\ORM\EntityManager->persist() /home/ubuntu/workspace/src/AppBundle/Controller/AbstractApiPostController.php:126
+[05-Jun-2017 16:54:37 UTC] PHP   8. Doctrine\ORM\UnitOfWork->persist() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:579
+[05-Jun-2017 16:54:37 UTC] PHP   9. Doctrine\ORM\UnitOfWork->doPersist() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1635
+[05-Jun-2017 16:54:37 UTC] PHP  10. Doctrine\ORM\UnitOfWork->persistNew() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1679
+[05-Jun-2017 16:54:37 UTC] PHP  11. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:892
+[05-Jun-2017 16:54:37 UTC] PHP  12. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[05-Jun-2017 16:54:37 UTC] PHP  13. AppBundle\Event\Listener\DBChangeListener->prePersist() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[05-Jun-2017 16:54:37 UTC] PHP  14. AppBundle\Event\Listener\DBChangeListener->doValidate() /home/ubuntu/workspace/src/AppBundle/Event/Listener/DBChangeListener.php:21
+[05-Jun-2017 16:54:37 UTC] PHP  15. AppBundle\Validator\ValidatorListener->validatePublicacion() /home/ubuntu/workspace/src/AppBundle/Event/Listener/DBChangeListener.php:53
+[06-Jun-2017 17:27:38 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/ubuntu/workspace/src/AppBundle/Validator/ValidatorListener.php on line 558
+[06-Jun-2017 17:27:38 UTC] PHP Stack trace:
+[06-Jun-2017 17:27:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/web/app.php:0
+[06-Jun-2017 17:27:38 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/web/app.php:17
+[06-Jun-2017 17:27:38 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:168
+[06-Jun-2017 17:27:38 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/var/cache/prod/classes.php:7218
+[06-Jun-2017 17:27:38 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/var/cache/prod/classes.php:7263}() /home/ubuntu/workspace/var/cache/prod/classes.php:7263
+[06-Jun-2017 17:27:38 UTC] PHP   6. AppBundle\Controller\AbstractApiPostController->insertObject() /home/ubuntu/workspace/var/cache/prod/classes.php:7263
+[06-Jun-2017 17:27:38 UTC] PHP   7. Doctrine\ORM\EntityManager->persist() /home/ubuntu/workspace/src/AppBundle/Controller/AbstractApiPostController.php:126
+[06-Jun-2017 17:27:38 UTC] PHP   8. Doctrine\ORM\UnitOfWork->persist() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:579
+[06-Jun-2017 17:27:38 UTC] PHP   9. Doctrine\ORM\UnitOfWork->doPersist() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1635
+[06-Jun-2017 17:27:38 UTC] PHP  10. Doctrine\ORM\UnitOfWork->persistNew() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1679
+[06-Jun-2017 17:27:38 UTC] PHP  11. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:892
+[06-Jun-2017 17:27:38 UTC] PHP  12. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[06-Jun-2017 17:27:38 UTC] PHP  13. AppBundle\Event\Listener\DBChangeListener->prePersist() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[06-Jun-2017 17:27:38 UTC] PHP  14. AppBundle\Event\Listener\DBChangeListener->doValidate() /home/ubuntu/workspace/src/AppBundle/Event/Listener/DBChangeListener.php:21
+[06-Jun-2017 17:27:38 UTC] PHP  15. AppBundle\Validator\ValidatorListener->validateConversacion() /home/ubuntu/workspace/src/AppBundle/Event/Listener/DBChangeListener.php:53
+[06-Jun-2017 18:13:38 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/ubuntu/workspace/src/AppBundle/Validator/ValidatorListener.php on line 335
+[06-Jun-2017 18:13:38 UTC] PHP Stack trace:
+[06-Jun-2017 18:13:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/web/app.php:0
+[06-Jun-2017 18:13:38 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/web/app.php:17
+[06-Jun-2017 18:13:38 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:168
+[06-Jun-2017 18:13:38 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/var/cache/prod/classes.php:7218
+[06-Jun-2017 18:13:38 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/var/cache/prod/classes.php:7263}() /home/ubuntu/workspace/var/cache/prod/classes.php:7263
+[06-Jun-2017 18:13:38 UTC] PHP   6. AppBundle\Controller\AbstractApiPostController->insertObject() /home/ubuntu/workspace/var/cache/prod/classes.php:7263
+[06-Jun-2017 18:13:38 UTC] PHP   7. Doctrine\ORM\EntityManager->persist() /home/ubuntu/workspace/src/AppBundle/Controller/AbstractApiPostController.php:126
+[06-Jun-2017 18:13:38 UTC] PHP   8. Doctrine\ORM\UnitOfWork->persist() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:579
+[06-Jun-2017 18:13:38 UTC] PHP   9. Doctrine\ORM\UnitOfWork->doPersist() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1635
+[06-Jun-2017 18:13:38 UTC] PHP  10. Doctrine\ORM\UnitOfWork->persistNew() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:1679
+[06-Jun-2017 18:13:38 UTC] PHP  11. Doctrine\ORM\Event\ListenersInvoker->invoke() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php:892
+[06-Jun-2017 18:13:38 UTC] PHP  12. Symfony\Bridge\Doctrine\ContainerAwareEventManager->dispatchEvent() /home/ubuntu/workspace/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php:117
+[06-Jun-2017 18:13:38 UTC] PHP  13. AppBundle\Event\Listener\DBChangeListener->prePersist() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php:63
+[06-Jun-2017 18:13:38 UTC] PHP  14. AppBundle\Event\Listener\DBChangeListener->doValidate() /home/ubuntu/workspace/src/AppBundle/Event/Listener/DBChangeListener.php:21
+[06-Jun-2017 18:13:38 UTC] PHP  15. AppBundle\Validator\ValidatorListener->validatePublicacion() /home/ubuntu/workspace/src/AppBundle/Event/Listener/DBChangeListener.php:53
+[07-Jun-2017 18:04:23 UTC] PHP Fatal error:  Call to a member function getPerfil() on a non-object in /home/ubuntu/workspace/src/AppBundle/Controller/LoginApiController.php on line 76
+[07-Jun-2017 18:04:23 UTC] PHP Stack trace:
+[07-Jun-2017 18:04:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/web/app.php:0
+[07-Jun-2017 18:04:23 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/web/app.php:17
+[07-Jun-2017 18:04:23 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:168
+[07-Jun-2017 18:04:23 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/var/cache/prod/classes.php:7218
+[07-Jun-2017 18:04:23 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/var/cache/prod/classes.php:7263}() /home/ubuntu/workspace/var/cache/prod/classes.php:7263
+[07-Jun-2017 18:04:23 UTC] PHP   6. AppBundle\Controller\LoginApiController->loginUser() /home/ubuntu/workspace/var/cache/prod/classes.php:7263
+[07-Jun-2017 18:04:30 UTC] PHP Fatal error:  Call to a member function getPerfil() on a non-object in /home/ubuntu/workspace/src/AppBundle/Controller/LoginApiController.php on line 76
+[07-Jun-2017 18:04:30 UTC] PHP Stack trace:
+[07-Jun-2017 18:04:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/web/app.php:0
+[07-Jun-2017 18:04:30 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/web/app.php:17
+[07-Jun-2017 18:04:30 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:168
+[07-Jun-2017 18:04:30 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/var/cache/prod/classes.php:7218
+[07-Jun-2017 18:04:30 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/var/cache/prod/classes.php:7263}() /home/ubuntu/workspace/var/cache/prod/classes.php:7263
+[07-Jun-2017 18:04:30 UTC] PHP   6. AppBundle\Controller\LoginApiController->loginUser() /home/ubuntu/workspace/var/cache/prod/classes.php:7263
+[07-Jun-2017 18:51:13 UTC] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got 'api_get_all_request' at position 45 in method AppBundle\Controller\UserGetMetadataInformation::seeUserMetadata().' in /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\Common...')
+#2 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Do in /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/FileLoader.php on line 118
+[07-Jun-2017 18:51:17 UTC] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got 'api_get_all_request' at position 45 in method AppBundle\Controller\UserGetMetadataInformation::seeUserMetadata().' in /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\Common...')
+#2 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/Do in /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/FileLoader.php on line 118
+[07-Jun-2017 18:51:45 UTC] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got 'api' at position 12 in method AppBundle\Controller\UserGetMetadataInformation::seeUserMetadata().' in /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\Common...')
+#2 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(744) in /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/FileLoader.php on line 118
+[07-Jun-2017 18:52:10 UTC] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got 'api' at position 12 in method AppBundle\Controller\UserGetMetadataInformation::seeUserMetadata().' in /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\Common...')
+#2 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(744) in /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/FileLoader.php on line 118
+[07-Jun-2017 18:52:15 UTC] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got 'api' at position 12 in method AppBundle\Controller\UserGetMetadataInformation::seeUserMetadata().' in /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\Common...')
+#2 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(744) in /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/FileLoader.php on line 118
+[07-Jun-2017 18:52:21 UTC] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got 'api' at position 12 in method AppBundle\Controller\UserGetMetadataInformation::seeUserMetadata().' in /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\Common...')
+#2 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(744) in /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/FileLoader.php on line 118
+[07-Jun-2017 18:52:33 UTC] PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Syntax Error] Expected Doctrine\Common\Annotations\DocLexer::T_CLOSE_PARENTHESIS, got 'api' at position 11 in method AppBundle\Controller\UserGetMetadataInformation::seeUserMetadata().' in /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(424): Doctrine\Common\Annotations\AnnotationException::syntaxError('Expected Doctri...')
+#1 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(372): Doctrine\Common\Annotations\DocParser->syntaxError('Doctrine\Common...')
+#2 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(836): Doctrine\Common\Annotations\DocParser->match(103)
+#3 /home/ubuntu/workspace/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php(744) in /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/FileLoader.php on line 118
